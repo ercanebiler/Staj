@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <META HTTP-EQUIV="Refresh"
+          CONTENT="5; URL=http://localhost:17324/Product/ProductView">
+    <title>ProductView</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>LAST UPDATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.lastUpdatedTime</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+       
+    </div>
+</body>
+</html>
